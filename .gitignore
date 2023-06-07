@@ -22,3 +22,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+.yarn/cache/react-icon-npm-1.0.0-03a79ac27c-3c36c9a2ad.zip
+.yarn/install-state.gz
+.yarn/cache/react-icons-npm-4.9.0-633c387145-69d1000d02.zip
+.yarn/cache/react-router-dom-npm-6.12.0-1f34a6fc93-e7c620596e.zip
+.gitignore
+yarn.lock
+.pnp.cjs
+.yarn/cache/react-router-npm-6.12.0-f226a6693e-3151af8539.zip
+.yarn/cache/@remix-run-router-npm-1.6.3-3b3f8c93e7-f6968b1626.zip
+.gitignore
