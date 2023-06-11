@@ -10,6 +10,7 @@ import MyCart from "./pages/MyCart";
 import NotFound from "./pages/NotFound";
 import AllProducts from "./pages/AllProducts";
 import Home from "./pages/Home";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/products/new",
-        element: <NewProduct />,
+        element: (
+          <ProtectedRoute requireAdmin>
+            <NewProduct />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/products/:id",
@@ -36,7 +41,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/carts",
-        element: <MyCart />,
+        element: (
+          <ProtectedRoute>
+            <MyCart />
+          </ProtectedRoute>
+        ),
       },
     ],
   },
