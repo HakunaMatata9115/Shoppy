@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../components/ui/Button";
 import { uploadeImage } from "../api/uploader";
+import { addNewProduct } from "../api/firebase";
 
 export default function NewProduct() {
   const [product, setProduct] = useState({});
@@ -19,6 +20,7 @@ export default function NewProduct() {
     e.preventDefault();
     uploadeImage(file).then((url) => {
       console.log(url);
+      addNewProduct(product, url);
     });
   };
 
@@ -50,37 +52,37 @@ export default function NewProduct() {
         <input
           className="flex"
           type="text"
-          name="title"
+          name="price"
           value={product.price ?? ""}
           placeholder="가격"
-          // required
+          required
           onChange={handleChange}
         />
         <input
           className="flex"
           type="text"
-          name="title"
+          name="category"
           value={product.category ?? ""}
           placeholder="카테고리"
-          // required
+          required
           onChange={handleChange}
         />
         <input
           className="flex"
           type="text"
-          name="title"
+          name="description"
           value={product.description ?? ""}
           placeholder="제품설명"
-          // required
+          required
           onChange={handleChange}
         />
         <input
           className="flex"
           type="text"
-          name="title"
+          name="options"
           value={product.options ?? ""}
           placeholder="옵션들(콤마(,)로 구분)"
-          // required
+          required
           onChange={handleChange}
         />
         <Button text={"제품 등록하기"} />
