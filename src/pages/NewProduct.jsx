@@ -8,7 +8,7 @@ export default function NewProduct() {
   const [file, setFile] = useState();
   const [isUpLoading, setIsUpLoading] = useState(false);
   const [success, setSuccess] = useState();
-  const { addNewProduct } = useProducts();
+  const { addProduct } = useProducts();
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
